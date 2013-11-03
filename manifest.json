@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "show ip",
+  "version": "1.0",
+  "description": "show ip",
+
+  "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png" 
+  },
+
+  "page_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "show ip"
+  },
+
+  "background": {
+      "scripts": ["listen_req.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["show_ip.css"],
+      "js": ["jquery.js","show_ip.js"]
+    }
+  ],
+
+  "permissions": [
+    "webRequest",
+    "webNavigation",
+    "tabs",
+    "*://*/"
+  ]
+}
