@@ -4,6 +4,9 @@
   "version": "1.1",
   "description": "show ip",
 
+  "minimum_chrome_version": "10.0",
+  "devtools_page": "devtools.html",
+
   "icons": {
       "16": "images/icon16.png",
       "48": "images/icon48.png",
@@ -21,6 +24,7 @@
   "background": {
       "scripts": ["listen_req.js"]
   },
+
 
   "content_scripts": [
     {

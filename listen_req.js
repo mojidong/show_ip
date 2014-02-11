@@ -7,4 +7,20 @@ chrome.webRequest.onCompleted.addListener(function(details){
     });
 },{urls: ["<all_urls>"],types: ["main_frame"]});
 
+chrome.runtime.onConnect.addListener(function(devToolsConnection) {
+    chrome.webRequest.onCompleted.addListener(function(details){
+        message={'type':1,'details':details}
+        devToolsConnection.postMessage(message)
+    },{urls: ["<all_urls>"]});
+
+   //  chrome.webNavigation.onBeforeNavigate.addListener(function(details){
+   //      message={'type':0}
+   //      devToolsConnection.postMessage(message)
+   //  })
+
+    devToolsConnection.onDisconnect(function() {
+    });
+})
+
+
 

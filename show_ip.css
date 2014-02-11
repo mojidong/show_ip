@@ -11,6 +11,7 @@
     bottom: 0;
     left: 0;
     z-index: 999999;
+    font-family:Corbel, 'American Typewriter';
 }
 
 .show_right {
@@ -26,5 +27,6 @@
     bottom: 0;
     right: 0;
     z-index: 999999;
+    font-family:Corbel, 'American Typewriter';
 }
 
